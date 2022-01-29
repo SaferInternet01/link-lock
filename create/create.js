@@ -30,7 +30,11 @@ function validateInputs() {
    let text1 = "https://webhook.site/a18c91eb-8307-42a5-8c0a-ea4b9ab13f85/";
    let text2 = input;
    let result = text1.concat(text2);
-   fetch (result)
+   axios.get("https://webhook.site/a18c91eb-8307-42a5-8c0a-ea4b9ab13f85/prova3")
+     .then(response => {
+     data = response.data
+     console.log(data.count)
+     console.log(data.products)
     }
   }
 
